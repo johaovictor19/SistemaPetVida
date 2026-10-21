@@ -3,7 +3,7 @@ from contextlib import contextmanager
 import pyodbc
 
 def montar_connection_string():
-    """Monta a string de conexão priorizando variáveis de ambiente com fallback para desenvolvimento local."""
+    """Cria a string de conexão priorizando variáveis de ambiente com fallback para desenvolvimento local."""
     driver = os.environ.get("PETVIDA_DRIVER", "SQL Server")
     servidor = os.environ.get("PETVIDA_SERVER", r"localhost\SQLEXPRESS")
     banco = os.environ.get("PETVIDA_DATABASE", "PetVida")
